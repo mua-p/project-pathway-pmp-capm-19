@@ -50,6 +50,75 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
+## Project Structure
+
+```
+📁 CertExcellence/
+├── 📁 public/                    # Static assets
+│   ├── favicon.ico              # Site favicon
+│   ├── robots.txt               # Search engine crawling rules
+│   └── placeholder.svg          # Placeholder images
+│
+├── 📁 src/                      # Source code
+│   ├── 📁 components/           # Reusable UI components
+│   │   ├── 📁 ui/               # shadcn-ui components (buttons, forms, etc.)
+│   │   ├── AppNav.tsx           # Application navigation bar
+│   │   └── LandingNav.tsx       # Landing page navigation
+│   │
+│   ├── 📁 pages/                # Application routes/pages
+│   │   ├── Index.tsx            # Landing/home page
+│   │   ├── Dashboard.tsx        # User dashboard
+│   │   ├── ExamInterface.tsx    # Exam taking interface
+│   │   ├── Results.tsx          # Exam results page
+│   │   └── NotFound.tsx         # 404 error page
+│   │
+│   ├── 📁 services/             # API calls and external services
+│   │   └── api.ts               # Backend API integration layer
+│   │
+│   ├── 📁 hooks/                # Custom React hooks
+│   │   ├── useAuth.ts           # Authentication state management
+│   │   ├── use-toast.ts         # Toast notification hook
+│   │   └── use-mobile.tsx       # Mobile device detection
+│   │
+│   ├── 📁 utils/                # Helper functions and utilities
+│   │   ├── constants.ts         # Application constants and configs
+│   │   └── helpers.ts           # Utility functions (formatting, validation)
+│   │
+│   ├── 📁 types/                # TypeScript type definitions
+│   │   └── index.ts             # Core application types
+│   │
+│   ├── 📁 lib/                  # Third-party library configurations
+│   │   └── utils.ts             # Utility functions (cn helper)
+│   │
+│   ├── App.tsx                  # Root React component with routing
+│   ├── main.tsx                 # Application entry point
+│   ├── index.css                # Global styles and design tokens
+│   └── vite-env.d.ts           # Vite environment type definitions
+│
+├── 📁 Configuration Files
+│   ├── tailwind.config.ts       # Tailwind CSS configuration
+│   ├── vite.config.ts           # Vite build tool configuration
+│   ├── tsconfig.json            # TypeScript configuration
+│   ├── components.json          # shadcn-ui component configuration
+│   └── package.json             # Dependencies and scripts
+│
+└── README.md                    # Project documentation
+```
+
+### Folder Descriptions
+
+- **`/src/components/`** - Contains all reusable React components, including the complete shadcn-ui component library and custom navigation components
+- **`/src/pages/`** - Houses all application pages/routes corresponding to different screens in the certification exam platform
+- **`/src/services/`** - API service layer ready for backend integration, handling all external data operations
+- **`/src/hooks/`** - Custom React hooks for state management, authentication, and UI utilities
+- **`/src/utils/`** - Utility functions, constants, and helper methods used throughout the application
+- **`/src/types/`** - TypeScript type definitions for maintaining type safety across the application
+- **`/src/lib/`** - Configuration and utility functions for third-party libraries
+
+### Key Features
+
+This is a certification exam platform (CertExcellence) that supports PMP and CAPM certification preparation with multi-stage exams, progress tracking, and detailed performance analytics.
+
 ## What technologies are used for this project?
 
 This project is built with:
